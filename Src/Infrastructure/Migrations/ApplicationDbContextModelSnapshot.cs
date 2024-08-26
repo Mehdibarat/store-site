@@ -33,8 +33,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -49,8 +49,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("LastModifiedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PictureUrl")
                         .IsRequired()
@@ -58,7 +58,7 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("desimal(18,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ProductBrandId")
                         .HasColumnType("int");
@@ -94,8 +94,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -110,8 +110,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("LastModifiedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Summary")
                         .HasMaxLength(100)
@@ -137,8 +137,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -153,8 +153,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("LastModifiedBy")
-                        .HasColumnType("int");
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Summary")
                         .HasMaxLength(100)

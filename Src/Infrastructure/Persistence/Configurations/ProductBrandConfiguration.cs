@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configurations;
 
+
 public class ProductBrandConfiguration : IEntityTypeConfiguration<ProductBrand>
 {
     public void Configure(EntityTypeBuilder<ProductBrand> builder)

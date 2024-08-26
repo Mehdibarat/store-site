@@ -5,9 +5,9 @@ namespace Infrastructure;
 
 public static class ConfigureService
 {
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection Services,
+    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services,
         IConfiguration configuration)
     {
-        return Services;
+        return services;
     }
-}
+} 
