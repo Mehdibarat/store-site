@@ -1,30 +1,16 @@
 
+using System.Runtime.CompilerServices;
 using Infrastructure;
+using Infrastructure.Persistence;
+using Infrastructure.Persistence.SeedData;
+using Microsoft.EntityFrameworkCore;
 using web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 //configuration
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.AddServiceCollection();
+builder.AddWebConfigureServices(); 
+//build
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+await app.AddWebAppServiceAsync().ConfigureAwait(false);  
